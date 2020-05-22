@@ -1,3 +1,5 @@
+#A script to pull all services running on remote server.
+
 $Service_Info = @()
 #Below ServiceFilter variable can be used if you wish to filter services instead of listing all services on a machine
 #$ServiceFilter = "(NOT StartName LIKE '%LocalSystem') AND (NOT StartName LIKE '%LocalService') AND (NOT StartName LIKE '%NetworkService') AND (NOT StartName LIKE 'NT AUTHORITY%')"
