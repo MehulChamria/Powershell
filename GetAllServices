@@ -3,7 +3,7 @@
   This script helps pull all services running on remote server.
 
   .DESCRIPTION
-  The script imports the list of computer objects and performs the following operations:
+  The script imports the list of computer objects from a text file and performs the following operations:
   1. Initiates a CIM or WMI connection
   2. Pulls a list of all the services running on the system along with the following information for each service:
   	a. Server Name
