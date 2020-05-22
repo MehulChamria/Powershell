@@ -1,4 +1,19 @@
-#A script to pull all services running on remote server.
+<#
+  .SYNOPSIS
+  This script helps pull all services running on remote server.
+
+  .DESCRIPTION
+  The script imports the list of computer objects and performs the following operations:
+  1. Initiates a CIM or WMI connection
+  2. Pulls a list of all the services running on the system along with the following information for each service:
+  	a. Server Name
+	b. Service Name
+	c. Service Display Name
+	d. Account Used
+	e. Service State
+	f. Service Description
+  3. A use case for this script could be to find what account each service is using to run on a machine.
+#>
 
 $Service_Info = @()
 #Below ServiceFilter variable can be used if you wish to filter services instead of listing all services on a machine
@@ -61,8 +76,8 @@ $Parameters = @{
 	Path = "C:\temp\$(Get-Date -Format yyyMMdd)_ServiceAccounts.xlsx"
 	WorkSheetname = "ServiceAccountsInfo"
 	BoldTopRow = $true
-    AutoFilter = $true
-    AutoSize = $true
+    	AutoFilter = $true
+    	AutoSize = $true
 }
 
 $Service_Info | Export-Excel @Parameters
