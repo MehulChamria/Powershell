@@ -7,7 +7,7 @@
   1. Connects to the vCenter
   2. Takes snapshot of the guest VM
   3. Copies the VM Tools installer files to the guest VM
-  4. Executes the installer using Invoke-Command and specifying switches to install silently
+  4. Executes the installer using Invoke-Command and specifies switches to install silently
   5. Deletes the VM Tools installer files from the guest VM
   6. Displays the version of VM Tools installed. This will help you verify the VM Tools version after installation.
 #>
