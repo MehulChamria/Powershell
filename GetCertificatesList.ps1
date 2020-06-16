@@ -39,7 +39,7 @@ $domainTable = [Ordered]@{
 }
 
 $logFile = "C:\Temp\List_Certificate.log"
-"List_Certificate.ps1" > $logFile
+"GetCertificatesList.ps1" > $logFile
 
 $domainTable.Keys | ForEach-Object {
     $Certificates = @()
