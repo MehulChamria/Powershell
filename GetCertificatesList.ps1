@@ -40,6 +40,7 @@ $domainTable = [Ordered]@{
 
 $logFile = "C:\Temp\List_Certificate.log"
 "GetCertificatesList.ps1" > $logFile
+$outputExcel = "C:\temp\$(Get-Date -Format yyyMMdd)_CertificatesList.xlsx"
 
 $domainTable.Keys | ForEach-Object {
     $Certificates = @()
@@ -129,7 +130,7 @@ $domainTable.Keys | ForEach-Object {
     "[INFO] Completed scan for certificates on servers in $($domain)." >> $logFile
     "[INFO] Exporting certificates information for $($domain) to Excel." >> $logFile
     $Parameters = @{
-        Path = "C:\temp\$(Get-Date -Format yyyMMdd)_CertificatesList.xlsx"
+        Path = $outputExcel
         WorkSheetname = "$($Domain)"
         BoldTopRow = $true
         AutoFilter = $true
