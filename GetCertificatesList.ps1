@@ -53,7 +53,7 @@ $domainTable.Keys | ForEach-Object {
                     -Server $domainTable[$_]['Server']
     
     "[INFO] Found $($Servers.count) $($domain) servers in Active Directory." >> $logFile
-    $i = 1
+    
     $Servers | ForEach-Object {
         If ($_.DNSHostName) {
             $Computer = $_.DNSHostName
@@ -102,7 +102,6 @@ $domainTable.Keys | ForEach-Object {
                 }
                 $Outputs
             }
-            $i++
         }
         Catch {
             $Outputs = @()
@@ -114,7 +113,6 @@ $domainTable.Keys | ForEach-Object {
             $Output.Issue = "Cannot connect"
             $Outputs += $Output
             $Outputs
-            $i++
         }
     
     $Certificates += `
