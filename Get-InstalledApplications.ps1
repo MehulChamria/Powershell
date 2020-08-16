@@ -1,3 +1,18 @@
+<#
+  .SYNOPSIS
+  This script helps pull all applications installed on remote host/s.
+  .DESCRIPTION
+  The script imports the list of computer objects from a csv file and performs the following operations:
+  1. Checks if they are rechable.
+  2. Pulls a list of all the applications installed on the system in the following format:
+  	a. Display Name
+	b. Display Version
+	c. Publisher Name
+	d. Uninstall String
+  3. Exports the information to Excel format, if the module is available or CSV format.
+  4. A use case for this script could be to find all applications installed on one or more remote hosts.
+#>
+
 function Get-InstalledApplications {
     [CmdletBinding()]
     param (
