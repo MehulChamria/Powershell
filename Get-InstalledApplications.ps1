@@ -63,7 +63,7 @@ function Get-InstalledApplications {
     else {
         $Output |
             Select-Object PSComputerName, DisplayName, DisplayVersion |
-            Export-Csv -Path "C:\temp\$(Get-Date -Format yyyMMdd)_ApplicationsList.xlsx" -NoTypeInformation
+            Export-Csv -Path "C:\temp\$(Get-Date -Format yyyMMdd)_ApplicationsList.csv" -NoTypeInformation
     }
 }
 
