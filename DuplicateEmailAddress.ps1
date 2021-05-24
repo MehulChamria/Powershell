@@ -24,9 +24,8 @@ $DuplicateEmailAccounts = Get-ADUser @Parameters `
 $Parameters = @{
 	Path = "C:\temp\$(Get-Date -Format yyyMMdd)_DuplicateEmailAccounts.xlsx"
 	WorkSheetname = "DuplicateEmailAccounts"
-	BoldTopRow = $true
-  AutoFilter = $true
-  AutoSize = $true
+  	AutoFilter = $true
+  	AutoSize = $true
 }
 $DuplicateEmailAccounts| select -ExpandProperty Group `
    | Select Name, EmailAddress, SamAccountName, DistinguishedName `
