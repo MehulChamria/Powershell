@@ -132,7 +132,6 @@ $domainTable.Keys | ForEach-Object {
     $Parameters = @{
         Path = $outputExcel
         WorkSheetname = "$($Domain)"
-        BoldTopRow = $true
         AutoFilter = $true
         Verbose = $false
     }
