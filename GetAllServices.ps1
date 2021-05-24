@@ -75,7 +75,6 @@ Foreach ($Server in $Servers){
 $Parameters = @{
 	Path = "C:\temp\$(Get-Date -Format yyyMMdd)_ServiceAccounts.xlsx"
 	WorkSheetname = "ServiceAccountsInfo"
-	BoldTopRow = $true
     	AutoFilter = $true
     	AutoSize = $true
 }
