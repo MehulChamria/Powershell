@@ -92,7 +92,6 @@ $Parameters = @{
     Path        = $Path
     Append      = $true
     AutoSize    = $true
-    BoldTopRow  = $true
     TableName   = "Table_MappedVolumeList"
     WorkSheetName = "MappedVolumeList"
 }
