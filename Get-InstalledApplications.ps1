@@ -51,7 +51,6 @@ function Get-InstalledApplications {
             Path = "C:\temp\$(Get-Date -Format yyyMMdd)_ApplicationsList.xlsx"
             WorkSheetname = "AppsList"
             TableName = "Table_AppsList"
-            BoldTopRow = $true
             AutoFilter = $true
             AutoSize = $true
         }
